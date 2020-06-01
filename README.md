@@ -1,5 +1,15 @@
-# Ete2020
+# FastQC
 
-The **files** folder contains all files that needed to be downloaded (scripts, etc.)
+### Download the fastqc_script.sh to a directory.
+I put it in /scratch. 
 
-The **project** folder contains all different codes used for this project.
+```scp /drives/c/Users/Audrée/Downloads/fastqc_script.sh alemi055@cedar.computecanada.ca:~/scratch/```
+
+### Move to the "scratch" directory
+```cd /home/alemi055/scratch/```
+
+### Convert the Windows file to a Unix file
+```dos2unix fastqc_script.sh```
+
+### Submit the script as a sbatch job
+```sbatch fastqc_script.sh```

@@ -17,7 +17,7 @@ I put it in /scratch.
 ### Convert the Windows file to a Unix file
 ```dos2unix fastqc_script.sh```
 
-### Submit the script as a sbatch job
+### Submit the script as a batch job
 ```sbatch fastqc_script.sh```
 
 

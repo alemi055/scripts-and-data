@@ -40,6 +40,7 @@ Code - Try #2
     ILLUMINACLIP:adapters/TruSeq3-PE-2.fa:3:26:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:20 MINLEN:36 CROP:120 HEADCROP:20 AVGQUAL:20
 
 Code - Try #3
+
     java -jar $EBROOTTRIMMOMATIC/trimmomatic-0.36.jar PE -threads 4 -phred33 \
     HI.4444.003.Index_3.GR_RNA_BS3-3_R1.fastq.gz HI.4444.003.Index_3.GR_RNA_BS3-3_R2.fastq.gz \
     GR_RNA_BS3-3_R1_paired.fastq.gz GR_RNA_BS3-3_R1_unpaired.fastq.gz \

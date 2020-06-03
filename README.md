@@ -79,7 +79,7 @@ Code - Try #2
     Essai7_R2_paired_GR_RNA_BS3-3.fastq.gz Essai7_R2_unpaired_GR_RNA_BS3-3.fastq.gz \
     ILLUMINACLIP:adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:20 MINLEN:36 CROP:105 HEADCROP:15 AVGQUAL:20
     
-~~Code - Try #8
+~~Code - Try #8~~
 
     java -jar $EBROOTTRIMMOMATIC/trimmomatic-0.36.jar PE -threads 8 -phred33 \
     HI.4444.003.Index_3.GR_RNA_BS3-3_R1.fastq.gz HI.4444.003.Index_3.GR_RNA_BS3-3_R2.fastq.gz \
@@ -94,11 +94,3 @@ Code - Try #9
     Essai9_R1_paired_GR_RNA_BS3-3.fastq.gz Essai9_R1_unpaired_GR_RNA_BS3-3.fastq.gz \
     Essai9_R2_paired_GR_RNA_BS3-3.fastq.gz Essai9_R2_unpaired_GR_RNA_BS3-3.fastq.gz \
     ILLUMINACLIP:adapters/TruSeq3-PE-2.fa:3:26:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36 CROP:105 HEADCROP:15 AVGQUAL:20
-    
-Code - Try #10
-
-    java -jar $EBROOTTRIMMOMATIC/trimmomatic-0.36.jar PE -threads 8 -phred33 \
-    HI.4444.003.Index_3.GR_RNA_BS3-3_R1.fastq.gz HI.4444.003.Index_3.GR_RNA_BS3-3_R2.fastq.gz \
-    Essai9_R1_paired_GR_RNA_BS3-3.fastq.gz Essai9_R1_unpaired_GR_RNA_BS3-3.fastq.gz \
-    Essai9_R2_paired_GR_RNA_BS3-3.fastq.gz Essai9_R2_unpaired_GR_RNA_BS3-3.fastq.gz \
-    ILLUMINACLIP:adapters/TruSeq3-PE-2.fa:3:26:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36 CROP:102 HEADCROP:15 AVGQUAL:20

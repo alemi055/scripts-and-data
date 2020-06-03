@@ -94,3 +94,13 @@ Code - Try #9
     Essai9_R1_paired_GR_RNA_BS3-3.fastq.gz Essai9_R1_unpaired_GR_RNA_BS3-3.fastq.gz \
     Essai9_R2_paired_GR_RNA_BS3-3.fastq.gz Essai9_R2_unpaired_GR_RNA_BS3-3.fastq.gz \
     ILLUMINACLIP:adapters/TruSeq3-PE-2.fa:3:26:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36 CROP:105 HEADCROP:15 AVGQUAL:20
+
+GENERIC CODE
+
+    java -jar $EBROOTTRIMMOMATIC/trimmomatic-0.36.jar PE -threads 8 -phred33 \
+    HI.4444.00!.Index_!.GR_RNA_!_R1_fastq.gz HI.4444.00!.Index_!.GR_RNA_!_R2_fastq.gz \
+    00!.Index_!.GR_RNA_!_R1_paired_fastq.gz 00!.Index_!.GR_RNA_!_R1_unpaired_fastq.gz \
+    00!.Index_!.GR_RNA_!_R2_paired_fastq.gz 00!.Index_!.GR_RNA_!_R2_unpaired_fastq.gz \
+    ILLUMINACLIP:adapters/TruSeq3-PE-2.fa:3:26:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36 CROP:105 HEADCROP:15 AVGQUAL:20
+    
+*Replace "!" by appropriate number/letter*

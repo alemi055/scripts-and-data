@@ -49,5 +49,12 @@ GENERIC CODE
 
 Code - Try #1
 
+    cd scratch/ete2020/RNA_Arctic/quality_control_trimmed
+    module load gcc/7.3.0
+    module load trinity
+    module load openmpi/3.1.4
+    module load samtools
+    module load jellyfish
+    module load salmon
     Trinity --seqType fq --max_memory 50G \
-    --left 003.Index_1.GR_RNA_AS3_R1_paired.fastq.gz  --right 003.Index_1.GR_RNA_AS3_R1_paired.fastq.gz --CPU 6
+    --left 003.Index_3.GR_RNA_BS3-3_R1_paired.fastq.gz  --right 003.Index_3.GR_RNA_BS3-3_R2_paired.fastq.gz --CPU 6

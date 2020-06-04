@@ -52,4 +52,10 @@ cd /home/alemi055/scratch/ete2020/RNA_Arctic/quality_control_trimmed
 
 module load fastqc
 
-fastqc *_paired_*
+fastqc \
+004.Index_1.GR_RNA_AS3_R1_paired.fastq.gz 004.Index_1.GR_RNA_AS3_R2_paired.fastq.gz \
+004.Index_3.GR_RNA_BS3-3_R1_paired.fastq.gz 004.Index_3.GR_RNA_BS3-3_R2_paired.fastq.gz \
+004.Index_5.GR_RNA_S3-3_R1_paired.fastq.gz 004.Index_5.GR_RNA_S3-3_R2_paired.fastq.gz \
+004.Index_9.GR_RNA_RS3-1_R1_paired.fastq.gz 004.Index_9.GR_RNA_RS3-1_R2_paired.fastq.gz \
+004.Index_12.GR_RNA_S4-3_R1_paired.fastq.gz 004.Index_12.GR_RNA_S4-3_R2_paired.fastq.gz \
+004.Index_19.GR_RNA_S5-3_R1_paired.fastq.gz 004.Index_19.GR_RNA_S5-3_R2_paired.fastq.gz

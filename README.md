@@ -24,7 +24,7 @@ I put it in /scratch.
 ```sbatch fastqc_script.sh```
 
 
-# 3. Trimmomatic
+# 3. Quality Control with Trimmomatic
    
 Code - Try #9
 
@@ -43,3 +43,11 @@ GENERIC CODE
     ILLUMINACLIP:adapters/TruSeq3-PE-2.fa:3:26:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36 CROP:105 HEADCROP:15 AVGQUAL:20
     
 *Replace "!" by appropriate number/letter*
+
+
+# 4. De novo Assembly (with Trinity)
+
+Code - Try #1
+
+    Trinity --seqType fq --max_memory 50G \
+    --left 

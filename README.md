@@ -7,6 +7,9 @@ We will need to enter our Nanuq username and password.
 # 2. FastQC
 
 ### Download the fastqc_script.sh to a directory.
+
+*Note: To save a file, right-click on it and select "save link as"*
+
 I put it in /scratch. 
 
 ```scp /drives/c/Users/Audrée/Downloads/fastqc_script.sh alemi055@cedar.computecanada.ca:~/scratch/```

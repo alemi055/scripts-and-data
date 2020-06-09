@@ -1,3 +1,5 @@
+# RNA ARCTIC DATA
+
 # 1. Download raw data
     read -p "Login: " login && read -p "Password: " -s password && echo -n "j_username=$login&j_password=$password" > .auth.txt && chmod 600 .auth.txt && wget -O - "https://genomequebec.mcgill.ca/nanuqMPS/readsetList?projectId=15225&tech=HiSeq" --no-cookies --no-check-certificate --post-file .auth.txt | wget --no-cookies --no-check-certificate --post-file .auth.txt -ci -; rm -f .auth.txt
 
@@ -26,13 +28,13 @@ I put it in /scratch.
 
 # 3. Quality Control with Trimmomatic
    
-Code - Try #9
+Code - Try #10
 
     java -jar $EBROOTTRIMMOMATIC/trimmomatic-0.36.jar PE -threads 8 -phred33 \
     HI.4444.003.Index_3.GR_RNA_BS3-3_R1.fastq.gz HI.4444.003.Index_3.GR_RNA_BS3-3_R2.fastq.gz \
     003.Index_3.GR_RNA_BS3-3_R1_paired.fastq.gz 003.Index_3.GR_RNA_BS3-3_R1_unpaired.fastq.gz \
     003.Index_3.GR_RNA_BS3-3_R2_paired.fastq.gz 003.Index_3.GR_RNA_BS3-3_R2_unpaired.fastq.gz \
-    ILLUMINACLIP:adapters/TruSeq3-PE-2.fa:3:26:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:20 MINLEN:36 CROP:105 HEADCROP:15 AVGQUAL:20
+    ILLUMINACLIP:adapters/TruSeq3-PE-2.fa:3:26:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:20 CROP:105 HEADCROP:15 AVGQUAL:20 MINLEN:36
 
 GENERIC CODE
 
@@ -40,7 +42,7 @@ GENERIC CODE
     HI.4444.00!.Index_!.GR_RNA_!_R1_fastq.gz HI.4444.00!.Index_!.GR_RNA_!_R2_fastq.gz \
     00!.Index_!.GR_RNA_!_R1_paired_fastq.gz 00!.Index_!.GR_RNA_!_R1_unpaired_fastq.gz \
     00!.Index_!.GR_RNA_!_R2_paired_fastq.gz 00!.Index_!.GR_RNA_!_R2_unpaired_fastq.gz \
-    ILLUMINACLIP:adapters/TruSeq3-PE-2.fa:3:26:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:20 MINLEN:36 CROP:105 HEADCROP:15 AVGQUAL:20
+    ILLUMINACLIP:adapters/TruSeq3-PE-2.fa:3:26:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:20 CROP:105 HEADCROP:15 AVGQUAL:20 MINLEN:36
     
 *Replace "!" by appropriate number/letter*
 
@@ -57,4 +59,4 @@ Code - Try #1
     module load jellyfish
     module load salmon
     Trinity --seqType fq --max_memory 50G \
-    --left 003.Index_3.GR_RNA_BS3-3_R1_paired.fastq.gz  --right 003.Index_3.GR_RNA_BS3-3_R2_paired.fastq.gz --CPU 6
+    --left 003.Index_3.GR_RNA_BS3-3_R1_paired.fastq.gz  --right 003.Index_3.GR_RNA_BS3-3_R2_paired.fastq.gz

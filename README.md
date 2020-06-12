@@ -47,7 +47,9 @@ GENERIC CODE
 *Replace "!" by appropriate number/letter*
 
 
-# 4. De novo Assembly (with Trinity)
+# 4. De novo Assembly
+
+## Trinity
 
 Code - Try #1
 
@@ -60,3 +62,17 @@ Code - Try #1
     module load salmon
     Trinity --seqType fq --max_memory 50G \
     --left 003.Index_3.GR_RNA_BS3-3_R1_paired.fastq.gz  --right 003.Index_3.GR_RNA_BS3-3_R2_paired.fastq.gz
+
+## SPAdes
+
+Code - Try #3
+
+    #!/bin/bash
+    #SBATCH -c 6                               # Number of CPUS requested. If omitted, the default is 1 CPU.
+    #SBATCH --mem=180G                         # mem in gb
+    #SBATCH -t 5-0:0:0                         # How long will your job run for? If omitted, the default is 3 hours.
+    #SBATCH -J essai_3_spades                  # Name of job
+    
+    module load gcc/7.3.0
+    module load spades/3.13.1
+    spades.py --rna -1 003.Index_3.GR_RNA_BS3-3_R1_paired.fastq.gz -2 003.Index_3.GR_RNA_BS3-3_R2_paired.fastq.gz -o /home/alemi055/scratch/ete2020/RNA_Arctic/paired_trimmed/spades

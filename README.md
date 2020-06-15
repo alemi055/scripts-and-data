@@ -51,17 +51,21 @@ GENERIC CODE
 
 ## Trinity
 
-Code - Try #1
+Code - Try #4
 
-    cd scratch/ete2020/RNA_Arctic/quality_control_trimmed
+    #!/bin/bash
+    #SBATCH -c 10                              # Number of CPUS requested. If omitted, the default is 1 CPU.
+    #SBATCH --mem=180G                         # mem in gb
+    #SBATCH -t 7-0:0:0                         # How long will your job run for? If omitted, the default is 3 hours.
+    #SBATCH -J essai_4                 		   # Name of job
+    
     module load gcc/7.3.0
-    module load trinity
     module load openmpi/3.1.4
     module load samtools
     module load jellyfish
     module load salmon
-    Trinity --seqType fq --max_memory 50G \
-    --left 003.Index_3.GR_RNA_BS3-3_R1_paired.fastq.gz  --right 003.Index_3.GR_RNA_BS3-3_R2_paired.fastq.gz
+    module load trinity/2.9.0
+    Trinity --seqType fq --max_memory 160G --CPU 10 --left 003.Index_3.GR_RNA_BS3-3_R1_paired.fastq.gz --right 003.Index_3.GR_RNA_BS3-3_R2_paired.fastq.gz
 
 ## SPAdes
 

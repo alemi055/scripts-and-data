@@ -81,5 +81,4 @@ Code - Try #1
     #SBATCH -J db                           # Name of job
     
     module load gcc/7.3.0 blast+/2.10.0
-    wget https://ftp.ncbi.nlm.nih.gov/blast/db/nt.*tar.gz
-    
+    wget ftp://ftp.ncbi.nlm.nih.gov/blast/db/nt.*tar.gz  

@@ -80,9 +80,11 @@ Code - Try #3
 Code - Try #1
 
     #!/bin/bash
-    #SBATCH -c XXX                                # Number of CPUS requested. If omitted, the default is 1 CPU.
-    #SBATCH --mem=XXXG                            # mem in gb
-    #SBATCH -t XXX-0:0:0                          # How long will your job run for? If omitted, the default is 3 hours.
-    #SBATCH -J non-viral_contigs                  # Name of job
+    #SBATCH -c 10                           # Number of CPUS requested. If omitted, the default is 1 CPU.
+    #SBATCH --mem=50G                       # mem in gb
+    #SBATCH -t 5-0:0:0                      # How long will your job run for? If omitted, the default is 3 hours.
+    #SBATCH -J db                           # Name of job
     
     module load gcc/7.3.0 blast+/2.10.0
+    wget https://ftp.ncbi.nlm.nih.gov/blast/db/nt.*tar.gz
+    

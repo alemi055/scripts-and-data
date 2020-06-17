@@ -59,12 +59,7 @@ Code - Try #4
     #SBATCH -t 7-0:0:0                         # How long will your job run for? If omitted, the default is 3 hours.
     #SBATCH -J essai_4                 		   # Name of job
     
-    module load gcc/7.3.0
-    module load openmpi/3.1.4
-    module load samtools
-    module load jellyfish
-    module load salmon
-    module load trinity/2.9.0
+    module load gcc/7.3.0 openmpi/3.1.4 samtools jellyfish salmon trinity/2.9.0
     Trinity --seqType fq --max_memory 160G --CPU 10 --left 003.Index_3.GR_RNA_BS3-3_R1_paired.fastq.gz --right 003.Index_3.GR_RNA_BS3-3_R2_paired.fastq.gz
 
 ## SPAdes
@@ -77,8 +72,7 @@ Code - Try #3
     #SBATCH -t 5-0:0:0                         # How long will your job run for? If omitted, the default is 3 hours.
     #SBATCH -J essai_3_spades                  # Name of job
     
-    module load gcc/7.3.0
-    module load spades/3.13.1
+    module load gcc/7.3.0 spades/3.13.1
     spades.py --rna -1 003.Index_3.GR_RNA_BS3-3_R1_paired.fastq.gz -2 003.Index_3.GR_RNA_BS3-3_R2_paired.fastq.gz -o /home/alemi055/scratch/ete2020/RNA_Arctic/paired_trimmed/spades
     
 # 5. Get rid of all the non-viral contigs
@@ -91,5 +85,4 @@ Code - Try #1
     #SBATCH -t XXX-0:0:0                          # How long will your job run for? If omitted, the default is 3 hours.
     #SBATCH -J non-viral_contigs                  # Name of job
     
-    module load gcc/7.3.0
-    module load blast+/2.10.0
+    module load gcc/7.3.0 blast+/2.10.0

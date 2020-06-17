@@ -1,12 +1,12 @@
 # RNA ARCTIC DATA
 
-# 1. Download raw data
+## 1. Download raw data
     read -p "Login: " login && read -p "Password: " -s password && echo -n "j_username=$login&j_password=$password" > .auth.txt && chmod 600 .auth.txt && wget -O - "https://genomequebec.mcgill.ca/nanuqMPS/readsetList?projectId=15225&tech=HiSeq" --no-cookies --no-check-certificate --post-file .auth.txt | wget --no-cookies --no-check-certificate --post-file .auth.txt -ci -; rm -f .auth.txt
 
 We will need to enter our Nanuq username and password.
 
 
-# 2. FastQC
+## 2. FastQC
 
     #1. Download the fastqc_script.sh to a directory. 
     scp /drives/c/Users/Audrée/Downloads/fastqc_script.sh alemi055@cedar.computecanada.ca:~/scratch/
@@ -21,7 +21,7 @@ We will need to enter our Nanuq username and password.
     sbatch fastqc_script.sh
 
 
-# 3. Quality Control with Trimmomatic
+## 3. Quality Control with Trimmomatic
    
 Code - Try #10
 
@@ -42,9 +42,9 @@ GENERIC CODE
 *Replace "!" by appropriate number/letter*
 
 
-# 4. De novo Assembly
+## 4. De novo Assembly
 
-## Trinity
+### Trinity
 
 Code - Try #4
 
@@ -57,7 +57,7 @@ Code - Try #4
     module load gcc/7.3.0 openmpi/3.1.4 samtools jellyfish salmon trinity/2.9.0
     Trinity --seqType fq --max_memory 160G --CPU 10 --left 003.Index_3.GR_RNA_BS3-3_R1_paired.fastq.gz --right 003.Index_3.GR_RNA_BS3-3_R2_paired.fastq.gz
 
-## SPAdes
+### SPAdes
 
 Code - Try #3
 
@@ -70,7 +70,7 @@ Code - Try #3
     module load gcc/7.3.0 spades/3.13.1
     spades.py --rna -1 003.Index_3.GR_RNA_BS3-3_R1_paired.fastq.gz -2 003.Index_3.GR_RNA_BS3-3_R2_paired.fastq.gz -o /home/alemi055/scratch/ete2020/RNA_Arctic/paired_trimmed/spades
     
-# 5. Get rid of all the non-viral contigs
+## 5. Get rid of all the non-viral contigs
 
 Code - Try #1
 

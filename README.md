@@ -8,22 +8,17 @@ We will need to enter our Nanuq username and password.
 
 # 2. FastQC
 
-### Download the fastqc_script.sh to a directory.
-
-*Note: To save a file, right-click on it and select "save link as"*
-
-I put it in /scratch. 
-
-```scp /drives/c/Users/Audrée/Downloads/fastqc_script.sh alemi055@cedar.computecanada.ca:~/scratch/```
-
-### Move to the "scratch" directory
-```cd /home/alemi055/scratch/```
-
-### Convert the Windows file to a Unix file
-```dos2unix fastqc_script.sh```
-
-### Submit the script as a batch job
-```sbatch fastqc_script.sh```
+    #1. Download the fastqc_script.sh to a directory. 
+    scp /drives/c/Users/Audrée/Downloads/fastqc_script.sh alemi055@cedar.computecanada.ca:~/scratch/
+    
+    #2. Move to the directory.
+    cd /home/alemi055/scratch/
+    
+    #3. Convert the Windows file to a Unix file
+    dos2unix fastqc_script.sh
+    
+    #4. Submit the script as a batch job
+    sbatch fastqc_script.sh
 
 
 # 3. Quality Control with Trimmomatic

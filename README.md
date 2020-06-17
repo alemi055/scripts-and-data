@@ -80,5 +80,6 @@ Code - Try #1
     #SBATCH -t 5-0:0:0                      # How long will your job run for? If omitted, the default is 3 hours.
     #SBATCH -J db                           # Name of job
     
-    module load gcc/7.3.0 blast+/2.10.0
-    wget ftp://ftp.ncbi.nlm.nih.gov/blast/db/nt.*tar.gz  
+    #Build the database
+    wget ftp://ftp.ncbi.nlm.nih.gov/blast/db/nt.*tar.gz
+    #After that, extract all the files with tar xvzf

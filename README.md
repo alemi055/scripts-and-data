@@ -80,3 +80,16 @@ Code - Try #3
     module load gcc/7.3.0
     module load spades/3.13.1
     spades.py --rna -1 003.Index_3.GR_RNA_BS3-3_R1_paired.fastq.gz -2 003.Index_3.GR_RNA_BS3-3_R2_paired.fastq.gz -o /home/alemi055/scratch/ete2020/RNA_Arctic/paired_trimmed/spades
+    
+# 5. Get rid of all the non-viral contigs
+
+Code - Try #1
+
+    #!/bin/bash
+    #SBATCH -c XXX                                # Number of CPUS requested. If omitted, the default is 1 CPU.
+    #SBATCH --mem=XXXG                            # mem in gb
+    #SBATCH -t XXX-0:0:0                          # How long will your job run for? If omitted, the default is 3 hours.
+    #SBATCH -J non-viral_contigs                  # Name of job
+    
+    module load gcc/7.3.0
+    module load blast+/2.10.0

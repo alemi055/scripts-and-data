@@ -9,16 +9,16 @@ We will need to enter our Nanuq username and password.
 ## 2. FastQC
 
     #1. Download the fastqc_script.sh to a directory. 
-    scp /drives/c/Users/Audrée/Downloads/fastqc_script.sh alemi055@cedar.computecanada.ca:~/scratch/
+        scp /drives/c/Users/Audrée/Downloads/fastqc_script.sh alemi055@cedar.computecanada.ca:~/scratch/
     
     #2. Move to the directory.
-    cd /home/alemi055/scratch/
+        cd /home/alemi055/scratch/
     
     #3. Convert the Windows file to a Unix file
-    dos2unix fastqc_script.sh
+        dos2unix fastqc_script.sh
     
     #4. Submit the script as a batch job
-    sbatch fastqc_script.sh
+        sbatch fastqc_script.sh
 
 
 ## 3. Quality Control with Trimmomatic
@@ -80,6 +80,9 @@ Code - Try #1
     #SBATCH -t 5-0:0:0                      # How long will your job run for? If omitted, the default is 3 hours.
     #SBATCH -J db                           # Name of job
     
-    #Build the database
-    wget ftp://ftp.ncbi.nlm.nih.gov/blast/db/nt.*tar.gz
-    #After that, extract all the files with tar xvzf
+    #1. Build the database
+        wget ftp://ftp.ncbi.nlm.nih.gov/blast/db/nt.*tar.gz
+        #Extract all files with: tar xvzf
+        
+    #2. Blast the contigs against the database.
+        –db nt –query transcripts.fasta –out id_contigs_spades.out

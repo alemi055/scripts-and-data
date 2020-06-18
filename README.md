@@ -86,4 +86,4 @@ Code - Try #1
         
     #2. Blast the contigs against the database.
         module load gcc/7.3.0 blast+/2.10.0
-        blastn –db nt –query transcripts.fasta –out id_contigs_spades.out
+        blastn -db nt -query transcripts.fasta -out id_contigs_spades.out

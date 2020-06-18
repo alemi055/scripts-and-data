@@ -82,7 +82,8 @@ Code - Try #1
     
     #1. Build the database
         wget ftp://ftp.ncbi.nlm.nih.gov/blast/db/nt.*tar.gz
-        #Extract all files with: tar xvzf
+        # Extract all files with: tar xvzf
         
     #2. Blast the contigs against the database.
+        module load gcc/7.3.0 blast+/2.10.0
         –db nt –query transcripts.fasta –out id_contigs_spades.out

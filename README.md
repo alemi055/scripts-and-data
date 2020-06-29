@@ -73,17 +73,19 @@ Code - Try #3
 ## 5. Get rid of all the non-viral contigs
 
 Code - Try #1
-
-    #!/bin/bash
-    #SBATCH -c 10                           # Number of CPUS requested. If omitted, the default is 1 CPU.
-    #SBATCH --mem=50G                       # mem in gb
-    #SBATCH -t 5-0:0:0                      # How long will your job run for? If omitted, the default is 3 hours.
-    #SBATCH -J db                           # Name of job
     
     #1. Build the database
         wget ftp://ftp.ncbi.nlm.nih.gov/blast/db/nt.*tar.gz
         # Extract all files with: tar xvzf
         
+        
     #2. Blast the contigs against the database.
+    
+    #!/bin/bash
+    #SBATCH -c 10                            # Number of CPUS requested. If omitted, the default is 1 CPU.
+    #SBATCH --mem=50G                        # mem in gb
+    #SBATCH -t 14-0:0:0                      # How long will your job run for? If omitted, the default is 3 hours.
+    #SBATCH -J essai_3_blastn                # Name of job
+    
         module load gcc/7.3.0 blast+/2.10.0
-        blastn -db nt -query transcripts.fasta -out id_contigs_spades.out
+        blastn -task blastn -db nt -query transcripts_3.fasta -out id_contigs_spades_3.out -evalue 10e-20 -word_size 7 -max_target_seqs 100 

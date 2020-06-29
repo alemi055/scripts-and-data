@@ -82,7 +82,7 @@ Code - Try #1
     #2. Blast the contigs against the database.
     
     #!/bin/bash
-    #SBATCH -c 10                            # Number of CPUS requested. If omitted, the default is 1 CPU.
+    #SBATCH -c 28                            # Number of CPUS requested. If omitted, the default is 1 CPU.
     #SBATCH --mem=50G                        # mem in gb
     #SBATCH -t 14-0:0:0                      # How long will your job run for? If omitted, the default is 3 hours.
     #SBATCH -J essai_3_blastn                # Name of job

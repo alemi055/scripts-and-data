@@ -75,17 +75,31 @@ Code - Try #3
 Code - Try #1
     
     #1. Build the database
+    # Extract all the files with: tar xvzf
+    
         wget ftp://ftp.ncbi.nlm.nih.gov/blast/db/nt.*tar.gz
-        # Extract all files with: tar xvzf
         
         
-    #2. Blast the contigs against the database.
+        
+        
+    #2. Split the transcripts file into smaller files containing 1024 sequences each.
+    # Use the R code to do it.
+    # Change all the lower letters to upper letters.
+    # Split them in Unix directly.
     
-    #!/bin/bash
-    #SBATCH -c 28                            # Number of CPUS requested. If omitted, the default is 1 CPU.
-    #SBATCH --mem=50G                        # mem in gb
-    #SBATCH -t 14-0:0:0                      # How long will your job run for? If omitted, the default is 3 hours.
-    #SBATCH -J essai_3_blastn                # Name of job
+        tr [:lower:] [:upper:] < transcripts_oneline.fasta > transcripts_oneline_upper.fasta
+        split -d -l 2048 transcripts.fasta
     
+    
+    #3. Blast the contigs against the database. It has to be in the same directory as the one containing the database's files.
+    
+        #!/bin/bash
+        #SBATCH --array=10-89
+        #SBATCH -c 8                             # Number of CPUS requested. If omitted, the default is 1 CPU.
+        #SBATCH --mem=20G                         # mem in gb
+        #SBATCH -t 7-0:0:0                        # How long will your job run for? If omitted, the default is 3 hours.
+        #SBATCH -J essai_2_array                  # Name of job
+
         module load gcc/7.3.0 blast+/2.10.0
-        blastn -task blastn -db nt -query transcripts_3.fasta -out id_contigs_spades_3.out -evalue 10e-20 -word_size 7 -max_target_seqs 100 
+
+        blastn -num_threads 6 -task blastn -db /home/alemi055/scratch/ete2020/databases/nt -query seq${SLURM_ARRAY_TASK_ID} -out outmft_${SLURM_ARRAY_TASK_ID}.out -evalue 10e-20         -max_target_seqs 100 -word_size 7 -outfmt "7 qseqid sseqid sskingdoms staxids sscinames sblastnames scomnames pident bitscore evalue"

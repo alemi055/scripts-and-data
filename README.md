@@ -1,105 +1,95 @@
 # RNA ARCTIC DATA
+Pipeline developed on pair of files "HI.4444.003.Index_3.GR_RNA_BS3-3_R1_fastq.gz" & "HI.4444.003.Index_3.GR_RNA_BS3-3_R2_fastq.gz"
 
-## 1. Download raw data
-    read -p "Login: " login && read -p "Password: " -s password && echo -n "j_username=$login&j_password=$password" > .auth.txt && chmod 600 .auth.txt && wget -O - "https://genomequebec.mcgill.ca/nanuqMPS/readsetList?projectId=15225&tech=HiSeq" --no-cookies --no-check-certificate --post-file .auth.txt | wget --no-cookies --no-check-certificate --post-file .auth.txt -ci -; rm -f .auth.txt
+## 1. FastQC
 
-We will need to enter our Nanuq username and password.
+    #!/bin/bash
+    #SBATCH -c 5                            # Number of CPUS requested. If omitted, the default is 1 CPU.
+    #SBATCH --mem=50G                       # mem in gb
+    #SBATCH -t 0-5:0:0                      # How long will your job run for? If omitted, the default is 3 hours.
+    #SBATCH -J fastqc                       # Name of job
 
+    module load fastqc
 
-## 2. FastQC
+    fastqc -t 5 *.fastq.gz
 
-    #1. Download the fastqc_script.sh to a directory. 
-        scp /drives/c/Users/Audrée/Downloads/fastqc_script.sh alemi055@cedar.computecanada.ca:~/scratch/
+    cp /home/alemi055/scratch/ete2020/RNA_Arctic/raw_data/*html /home/alemi055/scratch/ete2020/RNA_Arctic/fastqc_1/
+
+    cp /home/alemi055/scratch/ete2020/RNA_Arctic/raw_data/*zip /home/alemi055/scratch/ete2020/RNA_Arctic/fastqc_1/
+
+    cd /home/alemi055/scratch/ete2020/RNA_Arctic/raw_data
+
+    rm *html
+
+    rm *zip
     
-    #2. Move to the directory.
-        cd /home/alemi055/scratch/
-    
-    #3. Convert the Windows file to a Unix file
-        dos2unix fastqc_script.sh
-    
-    #4. Submit the script as a batch job
-        sbatch fastqc_script.sh
+## 2. Trimmomatic
 
+    #!/bin/bash
+    #SBATCH -c 6                               # Number of CPUS requested. If omitted, the default is 1 CPU.
+    #SBATCH --mem=50gb                         # mem in gb
+    #SBATCH -t 1-0:0:0                         # How long will your job run for? If omitted, the default is 3 hours.
+    #SBATCH -J trimmmomatic                    # Name of job
 
-## 3. Quality Control with Trimmomatic
-   
-Code - Try #10
+    module load trimmomatic/0.36
 
     java -jar $EBROOTTRIMMOMATIC/trimmomatic-0.36.jar PE -threads 8 -phred33 \
     HI.4444.003.Index_3.GR_RNA_BS3-3_R1.fastq.gz HI.4444.003.Index_3.GR_RNA_BS3-3_R2.fastq.gz \
     003.Index_3.GR_RNA_BS3-3_R1_paired.fastq.gz 003.Index_3.GR_RNA_BS3-3_R1_unpaired.fastq.gz \
     003.Index_3.GR_RNA_BS3-3_R2_paired.fastq.gz 003.Index_3.GR_RNA_BS3-3_R2_unpaired.fastq.gz \
-    ILLUMINACLIP:adapters/TruSeq3-PE-2.fa:3:26:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:20 CROP:105 HEADCROP:15 AVGQUAL:20 MINLEN:36
+    ILLUMINACLIP:adapters/TruSeq3-PE-2.fa:3:26:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:20 MINLEN:36 CROP:105 HEADCROP:15 AVGQUAL:20
 
-GENERIC CODE
+    cp /home/alemi055/scratch/ete2020/RNA_Arctic/raw_data/*_paired.fastq.gz /home/alemi055/scratch/ete2020/RNA_Arctic/paired_trimmed
 
-    java -jar $EBROOTTRIMMOMATIC/trimmomatic-0.36.jar PE -threads 8 -phred33 \
-    HI.4444.00!.Index_!.GR_RNA_!_R1_fastq.gz HI.4444.00!.Index_!.GR_RNA_!_R2_fastq.gz \
-    00!.Index_!.GR_RNA_!_R1_paired_fastq.gz 00!.Index_!.GR_RNA_!_R1_unpaired_fastq.gz \
-    00!.Index_!.GR_RNA_!_R2_paired_fastq.gz 00!.Index_!.GR_RNA_!_R2_unpaired_fastq.gz \
-    ILLUMINACLIP:adapters/TruSeq3-PE-2.fa:3:26:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:20 CROP:105 HEADCROP:15 AVGQUAL:20 MINLEN:36
+    cd /home/alemi055/scratch/ete2020/RNA_Arctic/paired_trimmed
+
+    module load fastqc/0.11.8
+
+    fastqc -t 5 003.Index_3.GR_RNA_BS3-3_R1_paired.fastq.gz 003.Index_3.GR_RNA_BS3-3_R2_paired.fastq.gz
+
+## 3. FastQC
+
+    #!/bin/bash
+    #SBATCH -c 5                            # Number of CPUS requested. If omitted, the default is 1 CPU.
+    #SBATCH --mem=50G                       # mem in gb
+    #SBATCH -t 0-5:0:0                      # How long will your job run for? If omitted, the default is 3 hours.
+    #SBATCH -J fastqc                       # Name of job
+
+    module load fastqc
+
+    fastqc -t 5 *_paired.fastq.gz
+
+    cp /home/alemi055/scratch/ete2020/RNA_Arctic/raw_data/*html /home/alemi055/scratch/ete2020/RNA_Arctic/fastqc_1/
+
+    cp /home/alemi055/scratch/ete2020/RNA_Arctic/raw_data/*zip /home/alemi055/scratch/ete2020/RNA_Arctic/fastqc_1/
+
+    cd /home/alemi055/scratch/ete2020/RNA_Arctic/raw_data
+
+    rm *html
+
+    rm *zip
     
-*Replace "!" by appropriate number/letter*
-
-
-## 4. De novo Assembly
+## 3. Assembly de novo
 
 ### Trinity
 
-Code - Try #4
-
     #!/bin/bash
     #SBATCH -c 10                              # Number of CPUS requested. If omitted, the default is 1 CPU.
-    #SBATCH --mem=180G                         # mem in gb
-    #SBATCH -t 14-0:0:0                         # How long will your job run for? If omitted, the default is 3 hours.
-    #SBATCH -J essai_4                 		   # Name of job
-    
-    module load gcc/7.3.0 openmpi/3.1.4 samtools jellyfish salmon trinity
+    #SBATCH --mem=160G                         # mem in gb
+    #SBATCH -t 13-23:0:0                       # How long will your job run for? If omitted, the default is 3 hours.
+    #SBATCH -J trinity                 		   # Name of job
+
+    module load gcc/7.3.0 openmpi/3.1.4 samtools jellyfish salmon trinity/2.9.0
     Trinity --seqType fq --max_memory 120G --CPU 10 --left 003.Index_3.GR_RNA_BS3-3_R1_paired.fastq.gz --right 003.Index_3.GR_RNA_BS3-3_R2_paired.fastq.gz
 
 ### SPAdes
 
-Code - Try #3
-
     #!/bin/bash
     #SBATCH -c 6                               # Number of CPUS requested. If omitted, the default is 1 CPU.
-    #SBATCH --mem=180G                         # mem in gb
-    #SBATCH -t 5-0:0:0                         # How long will your job run for? If omitted, the default is 3 hours.
-    #SBATCH -J essai_3_spades                  # Name of job
-    
+    #SBATCH --mem=120G                         # mem in gb
+    #SBATCH -t 6-23:0:0                        # How long will your job run for? If omitted, the default is 3 hours.
+    #SBATCH -J spades                  	       # Name of job
+
     module load gcc/7.3.0 spades/3.13.1
-    spades.py --rna -1 003.Index_3.GR_RNA_BS3-3_R1_paired.fastq.gz -2 003.Index_3.GR_RNA_BS3-3_R2_paired.fastq.gz -o /home/alemi055/scratch/ete2020/RNA_Arctic/paired_trimmed/spades
-    
-## 5. Get rid of all the non-viral contigs
 
-Code - Try #1
-    
-    #1. Build the database
-    # Extract all the files with: tar xvzf
-    
-        wget ftp://ftp.ncbi.nlm.nih.gov/blast/db/nt.*tar.gz
-        
-        
-        
-        
-    #2. Split the transcripts file into smaller files containing 1024 sequences each.
-    # Use the R code to do it.
-    # Change all the lower letters to upper letters.
-    # Split them in Unix directly.
-    
-        tr [:lower:] [:upper:] < transcripts_oneline.fasta > transcripts_oneline_upper.fasta
-        split -d -l 2048 transcripts.fasta
-    
-    
-    #3. Blast the contigs against the database. It has to be in the same directory as the one containing the database's files.
-    
-        #!/bin/bash
-        #SBATCH --array=10-89
-        #SBATCH -c 8                             # Number of CPUS requested. If omitted, the default is 1 CPU.
-        #SBATCH --mem=20G                         # mem in gb
-        #SBATCH -t 7-0:0:0                        # How long will your job run for? If omitted, the default is 3 hours.
-        #SBATCH -J essai_2_array                  # Name of job
-
-        module load gcc/7.3.0 blast+/2.10.0
-
-        blastn -num_threads 6 -task blastn -db /home/alemi055/scratch/ete2020/databases/nt -query seq${SLURM_ARRAY_TASK_ID} -out outmft_${SLURM_ARRAY_TASK_ID}.out -evalue 10e-20         -max_target_seqs 100 -word_size 7 -outfmt "7 qseqid sseqid sskingdoms staxids sscinames sblastnames scomnames pident bitscore evalue"
+    spades.py --rna -1 004.Index_3.GR_RNA_BS3-3_R1_paired.fastq.gz -2 004.Index_3.GR_RNA_BS3-3_R2_paired.fastq.gz -o /home/alemi055/scratch/ete2020/RNA_Arctic/paired_trimmed/004_spades

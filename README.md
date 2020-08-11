@@ -71,7 +71,7 @@ Pipeline developed on pair of files "HI.4444.003.Index_3.GR_RNA_BS3-3_R1_fastq.g
     
 ## 3. Assembly de novo
 
-### Trinity
+#### Trinity
 
     #!/bin/bash
     #SBATCH -c 10                              # Number of CPUS requested. If omitted, the default is 1 CPU.
@@ -82,7 +82,7 @@ Pipeline developed on pair of files "HI.4444.003.Index_3.GR_RNA_BS3-3_R1_fastq.g
     module load gcc/7.3.0 openmpi/3.1.4 samtools jellyfish salmon trinity/2.9.0
     Trinity --seqType fq --max_memory 120G --CPU 10 --left 003.Index_3.GR_RNA_BS3-3_R1_paired.fastq.gz --right 003.Index_3.GR_RNA_BS3-3_R2_paired.fastq.gz
 
-### SPAdes
+#### SPAdes
 
     #!/bin/bash
     #SBATCH -c 6                               # Number of CPUS requested. If omitted, the default is 1 CPU.
@@ -93,3 +93,15 @@ Pipeline developed on pair of files "HI.4444.003.Index_3.GR_RNA_BS3-3_R1_fastq.g
     module load gcc/7.3.0 spades/3.13.1
 
     spades.py --rna -1 004.Index_3.GR_RNA_BS3-3_R1_paired.fastq.gz -2 004.Index_3.GR_RNA_BS3-3_R2_paired.fastq.gz -o /home/alemi055/scratch/ete2020/RNA_Arctic/paired_trimmed/004_spades
+    
+### 3.1 Assembly - QC
+
+### Trinity
+
+
+
+### SPAdes
+
+1. contig_sizes_spades.R
+
+2. split_spades.R

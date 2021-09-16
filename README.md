@@ -6,4 +6,4 @@ Lemieux, A., Colby, G. A., Poulain, A. J., & Aris-Brosou, S. *Viral spillover ri
 Documents
 ===============
 **CC_guide.pdf**<br/>
-Guide: Compute Canada for Windows. Updated on: September 16, 2021.
+Guide: Compute Canada for Windows. Video: [link]. Updated on: September 16, 2021.

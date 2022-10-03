@@ -4,7 +4,7 @@ Code repository
 Lemieux, A., Colby, G. A., Poulain, A. J., & Aris-Brosou, S. *In press*. Viral spillover risk increases with climate change in High Arctic lake sediments. *Proceedings of the Royal Society B: Biological sciences*. **NN**:NNN-NNN
 
 **Compute_Canada_guide.pdf**<br/>
-*Compute Canda: a guide*. Updated on: September 22, 2021.
+*Compute Canada: a guide*. Updated on: September 22, 2021.
 
 LAZYPIPE
 ===============

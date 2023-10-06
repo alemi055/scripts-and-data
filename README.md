@@ -7,7 +7,7 @@ Code repository
 *Lemieux, A.*, Sannier, G., Nicolas, A., ..., Tastet, O., Dubé, M. & Kaufmann D. E. Enhanced detection of antigen-specific T cells by a multiplexed AIM assay. *In preparation*. (2023).
 
 **ShaabanKabakiboetal_2023.R**<br/>
-Shaaban Kabakibo, T., Arnold, E., Padhan, K., *Lemieux, A.*, ..., Shoukry, N., Dubé, M. & Kaufmann D. E. An artificial antigen presenting cell system reveals CD28 co-stimulation’s divergent role in modulating T cell effector functions during HIV infection. *In preparation*. (2023).
+Shaaban Kabakibo, T., Arnold, E., Padhan, K., *Lemieux, A.*, ..., Shoukry, N., Dubé, M. & Kaufmann D. E. An artificial antigen-presenting cell system reveals CD28 co-stimulation’s role in modulating T cell effector functions during HIV infection. *In preparation*. (2023).
 
 Files
 ===============

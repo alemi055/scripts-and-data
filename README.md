@@ -16,4 +16,4 @@ Files
 
 LAZYPIPE
 ===============
-LAZYPIPE's modified files or added files.
+[LAZYPIPE](https://bitbucket.org/plyusnin/lazypipe/src/master/)'s modified files or added files.

@@ -4,7 +4,7 @@ Code repository
 *Lemieux, A.*, Colby, G. A., Poulain, A. J. & Aris-Brosou, S. [Viral spillover risk increases with climate change in High Arctic lake sediments](https://royalsocietypublishing.org/doi/10.1098/rspb.2022.1073). *Proc Biol Sci*. **289**, 20221073 (2022).
 
 **Lemieuxetal_CellRepMet_2024.tar.bz2**<br/>
-*Lemieux, A.*, Sannier, G., Nicolas, A., ..., Tastet, O., Dubé, M. & Kaufmann D. E. Enhanced detection of antigen-specific T cells by a multiplexed AIM assay. *In press*. (2024).
+*Lemieux, A.*, Sannier, G., Nicolas, A., ..., Tastet, O., Dubé, M. & Kaufmann D. E. Enhanced detection of antigen-specific T cells by a multiplexed AIM assay. *Cell Rep Met*. **4**, 100690 (2024).
 
 **ShaabanKabakiboetal_2023.R**<br/>
 Shaaban Kabakibo, T., Arnold, E., Padhan, K., *Lemieux, A.*, ..., Shoukry, N., Dubé, M. & Kaufmann D. E. An artificial antigen-presenting cell system reveals CD28 co-stimulation’s role in modulating T cell effector functions during HIV infection. *In preparation*. (2023).

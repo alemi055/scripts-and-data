@@ -6,8 +6,8 @@ Code repository
 **Lemieuxetal_CellRepMet_2024.tar.bz2**<br/>
 *Lemieux, A.*, Sannier, G., Nicolas, A., ..., Tastet, O., Dubé, M. & Kaufmann D. E. Enhanced detection of antigen-specific T cells by a multiplexed AIM assay. *Cell Rep Met*. **4**, 100690 (2024).
 
-**ShaabanKabakiboetal_2023.R**<br/>
-Shaaban Kabakibo, T., Arnold, E., Padhan, K., *Lemieux, A.*, ..., Shoukry, N., Dubé, M. & Kaufmann D. E. An artificial antigen-presenting cell system reveals CD28 co-stimulation’s role in modulating T cell effector functions during HIV infection. *In preparation*. (2023).
+**ShaabanKabakiboetal_2024.R**<br/>
+Shaaban Kabakibo, T., Arnold, E., Padhan, K., *Lemieux, A.*, ..., Shoukry, N., Dubé, M. & Kaufmann D. E. An artificial antigen-presenting cell system reveals CD28 co-stimulation’s role in modulating T cell effector functions during HIV infection. *In preparation*. (2024).
 
 Files
 ===============

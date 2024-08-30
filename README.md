@@ -7,7 +7,7 @@ Code repository
 *Lemieux, A.*, Sannier, G., Nicolas, A., ..., Tastet, O., Dubé, M. & Kaufmann D. E. [Enhanced detection of antigen-specific T cells by a multiplexed AIM assay](https://www.cell.com/cell-reports-methods/fulltext/S2667-2375(23)00376-4). *Cell Rep Met*. **4**, 100690 (2024).
 
 **ShaabanKabakiboetal_2024.R**<br/>
-Shaaban Kabakibo, T., Arnold, E., Padhan, K., *Lemieux, A.*, ..., Shoukry, N., Dubé, M. & Kaufmann D. E. An artificial antigen-presenting cell system reveals CD28 co-stimulation’s role in modulating T cell effector functions during HIV infection. *In preparation*. (2024).
+Shaaban Kabakibo, T., Arnold, E., Padhan, K., *Lemieux, A.*, ..., Shoukry, N., Dubé, M. & Kaufmann D. E. An artificial antigen-presenting cell system reveals CD28 co-stimulation’s role in modulating T cell effector functions during HIV infection. *Under review*. (2024).
 
 **Lemieuxetal_2024.R**<br/>
 *Lemieux, A.*, Poulain, A. J., & Aris-Brosou, S. The High Arctic is dominated by uncharacterized, genetically highly diverse bacteriophages. *In preparation*. (2024).

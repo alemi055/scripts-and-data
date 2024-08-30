@@ -9,11 +9,10 @@ Code repository
 **ShaabanKabakiboetal_2024.R**<br/>
 Shaaban Kabakibo, T., Arnold, E., Padhan, K., *Lemieux, A.*, ..., Shoukry, N., Dubé, M. & Kaufmann D. E. An artificial antigen-presenting cell system reveals CD28 co-stimulation’s role in modulating T cell effector functions during HIV infection. *In preparation*. (2024).
 
+**Lemieuxetal_2024.R**<br/>
+*Lemieux, A.*, Poulain, A. J., & Aris-Brosou, S. The High Arctic is dominated by uncharacterized, genetically highly diverse bacteriophages. *In preparation*. (2024).
+
 Files
 ===============
 **Compute_Canada_guide.pdf**<br/>
 *Compute Canada: a guide*. Updated on: January 12, 2023.
-
-LAZYPIPE
-===============
-[LAZYPIPE](https://bitbucket.org/plyusnin/lazypipe/src/master/)'s modified files or added files.

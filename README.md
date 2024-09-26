@@ -3,7 +3,7 @@ Code repository
 
 ### 2024
 **Lemieuxetal_2024.R**<br/>
-*Lemieux, A.*, Poulain, A. J., & Aris-Brosou, S. The High Arctic is dominated by uncharacterized, genetically highly diverse bacteriophages. *In preparation*. (2024).
+*Lemieux, A.*, Poulain, A. J., & Aris-Brosou, S. [The High Arctic is dominated by uncharacterized, genetically highly diverse bacteriophages](https://www.biorxiv.org/content/10.1101/2024.09.10.612304v1.article-info). *bioRxiv*. (2024).
 
 **ShaabanKabakiboetal_2024.R**<br/>
 Shaaban Kabakibo, T., Arnold, E., Padhan, K., *Lemieux, A.*, ..., Shoukry, N., Dubé, M. & Kaufmann D. E. [Artificial antigen-presenting cell system reveals CD28’s role in modulating T cell functions during human immunodeficiency virus infection](https://www.cell.com/iscience/fulltext/S2589-0042(24)02172-2). *iScience*. **27**, 110947 (2024).

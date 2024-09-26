@@ -6,10 +6,10 @@ Code repository
 *Lemieux, A.*, Poulain, A. J., & Aris-Brosou, S. The High Arctic is dominated by uncharacterized, genetically highly diverse bacteriophages. *In preparation*. (2024).
 
 **ShaabanKabakiboetal_2024.R**<br/>
-Shaaban Kabakibo, T., Arnold, E., Padhan, K., *Lemieux, A.*, ..., Shoukry, N., Dubé, M. & Kaufmann D. E. An artificial antigen-presenting cell system reveals CD28 co-stimulation’s role in modulating T cell effector functions during HIV infection. *Under review*. (2024).
+Shaaban Kabakibo, T., Arnold, E., Padhan, K., *Lemieux, A.*, ..., Shoukry, N., Dubé, M. & Kaufmann D. E. [Artificial antigen-presenting cell system reveals CD28’s role in modulating T cell functions during human immunodeficiency virus infection](). *Under review*. (2024).
 
 **Lemieuxetal_CellRepMet_2024.tar.bz2**<br/>
-*Lemieux, A.*, Sannier, G., Nicolas, A., ..., Tastet, O., Dubé, M. & Kaufmann D. E. [Enhanced detection of antigen-specific T cells by a multiplexed AIM assay](https://www.cell.com/cell-reports-methods/fulltext/S2667-2375(23)00376-4). *Cell Rep Met*. **4**, 100690 (2024).
+*Lemieux, A.*, Sannier, G., Nicolas, A., ..., Tastet, O., Dubé, M. & Kaufmann D. E. [Enhanced detection of antigen-specific T cells by a multiplexed AIM assay](https://www.cell.com/iscience/fulltext/S2589-0042(24)02172-2). *iScience*. **27**, 110947 (2024).
 
 ### 2022
 **Lemieuxetal_ProcBiolSci_2022.tar.bz2**<br/>

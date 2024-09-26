@@ -9,7 +9,7 @@ Code repository
 Shaaban Kabakibo, T., Arnold, E., Padhan, K., *Lemieux, A.*, ..., Shoukry, N., Dubé, M. & Kaufmann D. E. [Artificial antigen-presenting cell system reveals CD28’s role in modulating T cell functions during human immunodeficiency virus infection](https://www.cell.com/iscience/fulltext/S2589-0042(24)02172-2). *iScience*. **27**, 110947 (2024).
 
 **Lemieuxetal_CellRepMet_2024.tar.bz2**<br/>
-*Lemieux, A.*, Sannier, G., Nicolas, A., ..., Tastet, O., Dubé, M. & Kaufmann D. E. [Enhanced detection of antigen-specific T cells by a multiplexed AIM assay](https://www.cell.com/cell-reports-methods/fulltext/S2667-2375(23)00376-4). *Cell Rep Met.*. **4**, 110690 (2024).
+*Lemieux, A.*, Sannier, G., Nicolas, A., ..., Tastet, O., Dubé, M. & Kaufmann D. E. [Enhanced detection of antigen-specific T cells by a multiplexed AIM assay](https://www.cell.com/cell-reports-methods/fulltext/S2667-2375(23)00376-4). *Cell Rep Met*. **4**, 110690 (2024).
 
 ### 2022
 **Lemieuxetal_ProcBiolSci_2022.tar.bz2**<br/>

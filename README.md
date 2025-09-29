@@ -3,7 +3,7 @@ Code repository
 
 ### 2025
 **Johnstonetal_2025.tar.bz2**<br/>
-Johnson, S., *Lemieux, A.*, Niyikora, J., ..., Archibald, D., Webster, R. J. & Hogg, W. Digital Patient Engagement in Primary Care: Reach and Response Rates. *In preprint*. (2025).
+Johnson, S., *Lemieux, A.*, Niyikora, J., ..., Archibald, D., Webster, R. J. & Hogg, W. Digital Patient Engagement in Primary Care: Reach and Response Rates. *Submitted*. (2025).
 
 ### 2024
 **Lemieuxetal_2024.tar.bz2**<br/>

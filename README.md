@@ -3,7 +3,7 @@ Code repository
 
 ### 2025
 **Lemieuxetal_2025.tar.bz2**<br/>
-*Lemieux, A.*, Kutcher, S. A., Galani Tietcheu, B. R., ..., Grosjean, S., Hogg, W. & Johnston, S. [A double-blind, crossover, non-inferiority randomized controlled trial where primary care providers and patients compare human- and AI-generated digital health messages: the AI-CARE study protocol](https://www.medrxiv.org/content/10.64898/2025.12.19.25341381v1.full.pdf). *medRxiv*. (2025).
+*Lemieux, A.*, Kutcher, S. A., Galani Tietcheu, B. R., ..., Grosjean, S., Hogg, W. & Johnston, S. [A double-blind, crossover, non-inferiority randomized controlled trial where primary care providers and patients compare human- and AI-generated digital health messages: the AI-CARE study protocol](https://www.medrxiv.org/content/10.64898/2025.12.19.25341381v1). *medRxiv*. (2025).
 
 **Johnstonetal_2025.tar.bz2**<br/>
 Johnson, S., *Lemieux, A.*, Niyikora, J., ..., Archibald, D., Webster, R. J. & Hogg, W. Digital Patient Engagement in Primary Care: Reach and Response Rates. *Submitted*. (2025).

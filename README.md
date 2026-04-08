@@ -1,7 +1,7 @@
 Code repository
 ===============
 
-### 2025
+### 2026
 **Lemieuxetal_2025.tar.bz2**<br/>
 *Lemieux, A.*, Kutcher, S. A., Galani Tietcheu, B. R., ..., Grosjean, S., Hogg, W. & Johnston, S. [A double-blind, crossover, non-inferiority randomized controlled trial where primary care providers and patients compare human- and AI-generated digital health messages: the AI-CARE study protocol](https://bmjopen.bmj.com/content/16/4/e115673). *BMJ Open*. **16**, e115673 (2026).
 

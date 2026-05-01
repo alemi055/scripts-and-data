@@ -2,6 +2,9 @@ Code repository
 ===============
 
 ### 2026
+**Lemieuxetal_2026.tar.bz2**<br/>
+*Lemieux, A.*, Poulain, A. J., & Aris-Brosou, S. [The High Arctic is dominated by uncharacterized, genetically highly diverse bacteriophages](https://www.biorxiv.org/content/10.1101/2024.09.10.612304v1.article-info). *bioRxiv*. (2024).
+
 **Lemieuxetal_2026_BMJOpen.tar.bz2**<br/>
 *Lemieux, A.*, Kutcher, S. A., Galani Tietcheu, B. R., ..., Grosjean, S., Hogg, W. & Johnston, S. [A double-blind, crossover, non-inferiority randomized controlled trial where primary care providers and patients compare human- and AI-generated digital health messages: the AI-CARE study protocol](https://bmjopen.bmj.com/content/16/4/e115673). *BMJ Open*. **16**, e115673 (2026).
 
@@ -10,9 +13,6 @@ Code repository
 Johnson, S., *Lemieux, A.*, Niyikora, J., ..., Archibald, D., Webster, R. J. & Hogg, W. Digital Patient Engagement in Primary Care: Reach and Response Rates. *Submitted*. (2025).
 
 ### 2024
-**Lemieuxetal_2024.tar.bz2**<br/>
-*Lemieux, A.*, Poulain, A. J., & Aris-Brosou, S. [The High Arctic is dominated by uncharacterized, genetically highly diverse bacteriophages](https://www.biorxiv.org/content/10.1101/2024.09.10.612304v1.article-info). *bioRxiv*. (2024).
-
 **ShaabanKabakiboetal_2024.R**<br/>
 Shaaban Kabakibo, T., Arnold, E., Padhan, K., *Lemieux, A.*, ..., Shoukry, N., Dubé, M. & Kaufmann D. E. [Artificial antigen-presenting cell system reveals CD28’s role in modulating T cell functions during human immunodeficiency virus infection](https://www.cell.com/iscience/fulltext/S2589-0042(24)02172-2). *iScience*. **27**, 110947 (2024).
 

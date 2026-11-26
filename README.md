@@ -1,9 +1,16 @@
+Google Scholar
+===============
+[https://scholar.google.com/citations?user=NbGEm9gAAAAJ&hl=fr](https://scholar.google.com/citations?user=NbGEm9gAAAAJ&hl=fr)
+
 Code repository
 ===============
-
 ### 2026
+
+**Scripts from the [IntegrityAlgorithm](https://github.com/alemi055/IntegrityAlgorithm)**<br/>
+Espinosa Ortiz, A., Dagand, T., Isnard, S., ***Lemieux, A.***, ..., Deeks, S.G., Cohn, L.B. & Chomont, N. Gut-bacteria-specific CD4+ T cells contribute to HIV persistence during ART. *Nat Immunol* **27**, 2503–2513 (2026). [https://doi.org/10.1038/s41590-026-02706-0](https://doi.org/10.1038/s41590-026-02706-0)
+
 **Johnstonetal_2026.tar.bz2**<br/>
-Johnston, S., ***Lemieux, A.***, Niyikora, J., ..., Archibald, D., Webster, R.J. & Hogg, W. Feasibility of Practice-Initiated, Roster-Based, Two-Way Primary Care Patient Digital Engagement for PREMs and PROMs Collection Using the Canadian Primary Care Information Network: Results from Cross-Sectional Surveys. *Under review* (2026).
+Johnston, S., ***Lemieux, A.***, Niyikora, J., ..., Archibald, D., Webster, R.J. & Hogg, W. Feasibility of Practice-Initiated, Roster-Based, Two-Way Primary Care Patient Digital Engagement for PREMs and PROMs Collection Using the Canadian Primary Care Information Network: Results from Cross-Sectional Surveys. *In press* (2026). [https://doi.org/10.2196/84905](https://preprints.jmir.org/preprint/84905/accepted)
 
 **Lemieuxetal_2026.tar.bz2**<br/>
 ***Lemieux, A.***, Poulain, A.J., & Aris-Brosou, S. The world’s largest High Arctic lake is dominated by uncharacterized, genetically highly diverse phages. *Under review* (2026). [https://doi.org/10.1101/2024.09.10.612304](https://doi.org/10.1101/2024.09.10.612304)
